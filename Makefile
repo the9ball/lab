@@ -114,6 +114,30 @@ test.out/fast:
 	$(MAKE) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/build
 .PHONY : test.out/fast
 
+src/a.o: src/a.cpp.o
+.PHONY : src/a.o
+
+# target to build an object file
+src/a.cpp.o:
+	$(MAKE) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/src/a.cpp.o
+.PHONY : src/a.cpp.o
+
+src/a.i: src/a.cpp.i
+.PHONY : src/a.i
+
+# target to preprocess a source file
+src/a.cpp.i:
+	$(MAKE) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/src/a.cpp.i
+.PHONY : src/a.cpp.i
+
+src/a.s: src/a.cpp.s
+.PHONY : src/a.s
+
+# target to generate assembly for a file
+src/a.cpp.s:
+	$(MAKE) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/src/a.cpp.s
+.PHONY : src/a.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -147,6 +171,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test.out"
+	@echo "... src/a.o"
+	@echo "... src/a.i"
+	@echo "... src/a.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
