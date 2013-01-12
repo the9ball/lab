@@ -8,6 +8,10 @@ AUX_SOURCE_DIRECTORY( src SRC_ROOT )
 SET( ALL_SRC
 	${SRC_ROOT}
 )
+# ライブラリ群
+SET( ALL_LIB
+	"libpcunit.a"
+)
 
 # -Iオプション
 include_directories( "/opt/Shaula/lib/PCUnit" )
@@ -18,4 +22,4 @@ add_definitions( -DDEBUG )
 
 # 実行ファイル
 ADD_EXECUTABLE( ${TARGET} ${ALL_SRC} )
-
+TARGET_LINK_LIBRARIES( ${TARGET} ${ALL_LIB} )
