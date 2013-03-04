@@ -1,11 +1,11 @@
 #pragma once
 
-class CVecter
+class CVector
 {
 public:
-	CVecter( float x, float y, float z );
+	CVector( float x, float y, float z );
 
-	void operator+=( const CVecter& a );
+	void operator+=( const CVector& a );
 
 	void printf() const;
 
